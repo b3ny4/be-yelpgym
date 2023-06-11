@@ -4,9 +4,10 @@ const Schema = mongoose.Schema;
 
 const GymSchema = new Schema({
     title: String,
-    price: String,
+    price: Number,
     description: String,
-    location: String
+    location: String,
+    image: String
 });
 
 export default mongoose.model('Gym', GymSchema);
