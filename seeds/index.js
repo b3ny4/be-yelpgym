@@ -21,7 +21,10 @@ const seedDB = async () => {
         const price = Math.floor(Math.random() * 10_000) / 100 + 10;
         const gym = new Gym({
             location: `${city.city}, ${city.state}`,
-            title: `${sample(descriptors)} ${sample(names)}`
+            title: `${sample(descriptors)} ${sample(names)}`,
+            image: "https://source.unsplash.com/collection/10552289",
+            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum ipsam odio cupiditate exercitationem explicabo tempora ea inventore earum velit nobis ut rerum numquam nulla quam facere sequi, cum architecto.",
+            price
         });
         await gym.save();
     }
